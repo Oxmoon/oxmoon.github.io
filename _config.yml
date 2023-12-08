@@ -1,0 +1,11 @@
+url: http://www.example.com
+
+languages: ['en', 'jp']
+exclude_from_localizations: ['assets', 'CNAME']
+defaultLang: en
+languageNames:
+    de: 日本語
+    en: English
+
+plugins:
+    - jekyll-multiple-languages-plugin

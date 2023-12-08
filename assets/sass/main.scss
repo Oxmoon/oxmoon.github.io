@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+
+// Set your brand colors
+$cool-grey: #8B94A3;
+$aquamarine: #8CFBDE;
+$spring-green: #0FFF95;
+$emerald: #06BA63;
+$pakistan-green: #103900;
+
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma-pricingtable/src/sass/index.sass";
+@import "../node_modules/bulma-switch/src/sass/index.sass";
+
+body {
+    background-color: $light;
+}
+
+#fixed {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    right: 0;
+    .field {
+        margin-bottom:0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.box {
+    background-color: $white;
+}
+
+
+.has-bg-image{
+    background: url('../images/calligraphy.png')center center;
+    background-size: cover;
+}

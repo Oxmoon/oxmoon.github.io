@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "bulma": "^0.9.4",
+        "bulma-pricingtable": "^0.2.0",
+        "bulma-switch": "^2.0.4",
+        "htmx.org": "^1.9.9",
+        "hyperscript.org": "^0.9.12"
+    }
+}
