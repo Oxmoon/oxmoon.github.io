@@ -40,3 +40,12 @@ body {
     background: url('../assets/images/calligraphy.png')center center;
     background-size: cover;
 }
+
+body.dark {
+    background-color: $black;
+    color: $light;
+    .box {
+        background-color: $dark;
+        color: $light;
+    }
+}

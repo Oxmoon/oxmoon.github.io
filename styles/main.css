@@ -11534,4 +11534,13 @@ body {
   background-size: cover;
 }
 
+body.dark {
+  background-color: hsl(0, 0%, 4%);
+  color: hsl(0, 0%, 96%);
+}
+body.dark .box {
+  background-color: hsl(0, 0%, 21%);
+  color: hsl(0, 0%, 96%);
+}
+
 /*# sourceMappingURL=main.css.map */
