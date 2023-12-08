@@ -11516,8 +11516,8 @@ body {
   position: fixed;
   z-index: 1;
   display: flex;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
 }
 #fixed .field {
   margin-bottom: 0;
@@ -11529,8 +11529,8 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 
-.has-bg-image {
-  background: url("../images/calligraphy.png") center center;
+.has-bg-img {
+  background: url("../assets/images/calligraphy.png") center center;
   background-size: cover;
 }
 
