@@ -26,6 +26,10 @@ $primary: #00719c;
 html {
     background-color: $light;
 
+    body {
+        overflow-x: hidden;
+    }
+
     main {
         background-color: $light;
     }
@@ -69,6 +73,50 @@ html {
     background-color: $primary;
     transition: background-color 0.2s;
 
+}
+
+.wrap-text {
+    height: max-content;
+    white-space: inherit;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#stay-put {
+    position: fixed;
+    max-width: 96vw;
+    z-index: 0;
+}
+
+@include desktop {
+    .hero-body {
+        height: 90vh;
+    }
+}
+
+@include tablet-only {
+    .hero-body {
+        height: 80vh;
+    }
+}
+
+@include mobile {
+    .hero-body {
+        height: 75vh;
+    }
+
+    .headshot {
+        width: 45vh !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @keyframes slidedown {
