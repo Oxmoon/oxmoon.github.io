@@ -11581,6 +11581,7 @@ html main {
 
 @media screen and (min-width: 1024px) {
   .hero-body {
+    padding-top: 70px !important;
     height: 90vh;
   }
 }

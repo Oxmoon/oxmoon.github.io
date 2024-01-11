@@ -97,6 +97,7 @@ html {
 
 @include desktop {
     .hero-body {
+        padding-top: 70px !important;
         height: 90vh;
     }
 }
