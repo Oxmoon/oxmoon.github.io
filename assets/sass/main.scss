@@ -7,6 +7,7 @@ $aquamarine: #8CFBDE;
 $spring-green: #0FFF95;
 $emerald: #06BA63;
 $pakistan-green: #103900;
+$primary: #00719c;
 
 
 // Import only what you need from Bulma
@@ -14,9 +15,22 @@ $pakistan-green: #103900;
 @import "../node_modules/bulma-pricingtable/src/sass/index.sass";
 @import "../node_modules/bulma-switch/src/sass/index.sass";
 
-body {
-    background-color: $light;
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }
+
+html {
+    background-color: $light;
+
+    main {
+        background-color: $light;
+    }
+}
+
 
 #fixed {
     position: fixed;
@@ -24,10 +38,145 @@ body {
     display: flex;
     top: 5px;
     right: 5px;
+
     .field {
-        margin-bottom:0;
+        margin-bottom: 0;
         padding-left: 5px;
         padding-right: 5px;
+    }
+}
+
+
+.hmf {
+    @include flexbox;
+    flex-direction: column;
+
+    header {
+        flex: 1;
+    }
+
+    main {
+        flex: 2;
+        @include flexbox;
+    }
+
+    footer {
+        flex: 1;
+    }
+}
+
+.open {
+    background-color: $primary;
+    transition: background-color 0.2s;
+
+}
+
+@keyframes slidedown {
+    from {
+        transform: translateY(-120%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.navbar-brand {
+    z-index: 99;
+    position: relative;
+}
+
+#navbarMenuHero.is-active {
+    z-index: 1;
+    position: relative;
+    animation-duration: 0.2s;
+    animation-name: slidedown;
+}
+
+
+.no-background {
+    background-color: none !important;
+}
+
+.basic-nav {
+    backdrop-filter: none !important;
+    background-color: $primary !important;
+    background-image: none !important;
+    color: $light;
+
+    .navbar-burger {
+        color: $light;
+    }
+
+    .navbar-item:hover {
+        background-image: none !important;
+        background-color: lighten($primary, 10%);
+        color: $light;
+    }
+
+
+    .no-hover {
+        background-image: none !important;
+
+        &:hover {
+            background-color: $primary !important;
+        }
+    }
+
+    a,
+    h1 {
+        color: $light;
+    }
+}
+
+
+.fancy-navbar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 0, 0, 0)) !important;
+    backdrop-filter: blur(4px);
+
+    .no-hover {
+        background-image: none !important;
+
+        &:hover {
+            background-color: none !important;
+        }
+
+    }
+}
+
+.tabs {
+    li {
+        backdrop-filter: blur(4px);
+    }
+}
+
+@include desktop {
+    .navbar {
+        .navbar-item {
+            background-color: none !important;
+        }
+
+        .navbar-item:hover {
+            background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 0, 0, 0));
+        }
+    }
+}
+
+@include touch {
+    .navbar-item {
+        background-color: none !important;
+    }
+
+    .navbar-menu {
+        background-color: $primary-dark !important;
+    }
+}
+
+
+li.is-active {
+    a {
+        background-color: $light !important;
+        border-color: $light !important;
     }
 }
 
@@ -36,16 +185,50 @@ body {
 }
 
 
-.has-bg-img{
+.has-bg-img {
     background: url('../assets/images/calligraphy.png')center center;
     background-size: cover;
 }
 
-body.dark {
+.has-background-dark-green {
+    background-color: $pakistan-green;
+    color: white;
+}
+
+html.dark {
     background-color: $black;
     color: $light;
+
+    main {
+        background-color: $black;
+    }
+
     .box {
         background-color: $dark;
         color: $light;
     }
+
+    a {
+        color: $link-light
+    }
+
+    li.is-active {
+        a {
+            background-color: $black !important;
+            border-color: $black !important;
+        }
+    }
+
+    .subtitle {
+        color: $light;
+    }
+
+    .title {
+        color: $light;
+    }
+
+    h1 {
+        color: $light;
+    }
+
 }

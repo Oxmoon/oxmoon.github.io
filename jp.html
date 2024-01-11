@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en" _="on load call theme()">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="{% t site.description %}" />
+        <meta name="keywords" content="{% t site.keywords %}" />
+        <link
+            href="./assets/fontawesome-free-6.5.1-web/css/fontawesome.css"
+            rel="stylesheet" />
+        <link
+            href="./assets/fontawesome-free-6.5.1-web/css/brands.css"
+            rel="stylesheet" />
+        <link
+            href="./assets/fontawesome-free-6.5.1-web/css/solid.css"
+            rel="stylesheet" />
+        <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+        <link rel="stylesheet" href="./styles/main.css" />
+        <title></title>
+    </head>
+    <body>
+        <header style="z-index: -1">
+            <section class="hero is-primary is-medium" style="z-index: -5">
+                <div class="hero-head">
+                    <nav class="navbar is-fixed-top fancy-navbar is-primary">
+                        <div class="container">
+                            <div class="navbar-brand">
+                                <span
+                                    class="navbar-item no-hover no-background">
+                                    <h1 class="title">Gage Hilyard</h1>
+                                </span>
+                                <span
+                                    _="on click toggle .is-active on .navbar-burger then toggle .is-active on #navbarMenuHero then toggle .open on .navbar-brand"
+                                    class="navbar-burger"
+                                    data-target="navbarMenuHeroB">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </div>
+                            <div id="navbarMenuHero" class="navbar-menu">
+                                <div class="navbar-end">
+                                    <a class="navbar-item" href="./index.html">
+                                        <span> English </span>
+                                    </a>
+                                    <a
+                                        class="navbar-item"
+                                        href="https://www.linkedin.com/in/gage-hilyard/">
+                                        <span class="icon">
+                                            <i class="fab fa-linkedin"></i>
+                                        </span>
+                                        <span>&nbsp;LinkedIn</span>
+                                    </a>
+                                    <a
+                                        class="navbar-item"
+                                        href="https://github.com/Oxmoon/">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>&nbsp;Github</span>
+                                    </a>
+                                    <span class="navbar-item no-hover">
+                                        <a
+                                            class="button is-primary is-inverted"
+                                            href="./contact.html">
+                                            <span class="icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <span>Contact me</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="hero-body pb-6" style="height: 650px">
+                    <div
+                        class="container has-text-centered columns"
+                        style="position: fixed; z-index: 0">
+                        <div class="column">
+                            <figure class="image is-256x256 m-0">
+                                <img
+                                    class="is-rounded"
+                                    src="./assets/images/headshot.jpg" />
+                            </figure>
+                        </div>
+                        <div class="column my-auto">
+                            <p class="title">ヒルヤード・ゲージ</p>
+                            <p class="subtitle">
+                                言語学 | ボクサー | ウェブ開発者
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-foot">
+                    <nav class="tabs is-boxed is-fullwidth">
+                        <div class="container">
+                            <ul id="tabs">
+                                <li class="is-active">
+                                    <a _="on click call tab(tabs, #about, me)"
+                                        >About Me</a
+                                    >
+                                </li>
+                                <li>
+                                    <a _="on click call tab(tabs, #works, me)"
+                                        >Works</a
+                                    >
+                                </li>
+                                <li>
+                                    <a _="on click call tab(tabs, #skills, me)"
+                                        >Skills</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+        </header>
+        <main class="main py-6" style="z-index: 1; position: relative">
+            <section style="z-index: 2">
+                <div id="about" class="container">
+                    <div
+                        _="on intersection(intersecting) having threshold 0.2
+                if intersecting transition my opacity to 1
+                else transition my opacity to 0">
+                        <section class="section px-5">
+                            <h1 class="title">
+                                <i class="fas fa-hand"></i> &nbsp;こんにちは
+                            </h1>
+                        </section>
+                        <section class="content px-5">
+                            <p>
+                                はじめまして、ゲージです。
+                                アメリカのモンタナ州でフルスタックウェブ開発をしています。
+                            </p>
+                            <p>
+                                プログラミング以外はボクシング、スノボードや語学が主にやっています。
+                            </p>
+                            <p>遠慮なく連絡してください。</p>
+                        </section>
+                    </div>
+                    <div
+                        _="on intersection(intersecting) having threshold 0.2
+                if intersecting transition my opacity to 1
+                else transition my opacity to 0">
+                        <section class="section px-5">
+                            <h1 class="title">
+                                <i class="fas fa-graduation-cap"></i>
+                                &nbsp;学歴
+                            </h1>
+                        </section>
+                        <div class="columns px-4">
+                            <div class="column">
+                                <div class="box has-background-primary">
+                                    <h1 class="title has-text-white">
+                                        <i class="fas fa-award"></i>
+                                        &nbsp;学位
+                                    </h1>
+                                    <h2 class="subtitle has-text-white">
+                                        <a
+                                            class="has-text-link-light"
+                                            href="https://wwww.montana.edu"
+                                            >MSU Bozeman</a
+                                        >
+                                        2023
+                                    </h2>
+                                    <p class="subtitle has-text-white">
+                                        コンピュータサイエンス専攻の理学士（優等）
+                                    </p>
+                                    <br />
+                                    <p
+                                        class="has-text-weight-bold has-text-white">
+                                        Coursework focused on:
+                                    </p>
+                                    <ul>
+                                        <li class="has-text-white">
+                                            Web Development
+                                        </li>
+                                        <li class="has-text-white">
+                                            System Administration
+                                        </li>
+                                        <li class="has-text-white">
+                                            Data Structures
+                                        </li>
+                                        <li class="has-text-white">
+                                            CS Theory
+                                        </li>
+                                    </ul>
+                                    <br />
+
+                                    <h1 class="subtitle has-text-white mb-2">
+                                        <i class="fas fa-certificate"></i>
+                                        &nbsp;Certifications
+                                    </h1>
+                                    <p class="has-text-white">
+                                        <a
+                                            class="has-text-link-light"
+                                            href="https://www.jlpt.jp/e/about/levelsummary.html"
+                                            >Japanese Language Profeciency Test
+                                            N2</a
+                                        >
+                                        - August 2023
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="box has-background-primary">
+                                    <h1 class="title has-text-white">
+                                        <i class="fas fa-globe-asia"></i>
+                                        &nbsp;Foreign Exchange
+                                    </h1>
+                                    <h2 class="subtitle has-text-white">
+                                        Kumamoto Japan
+                                        <a
+                                            class="has-text-link-light"
+                                            href="https://www.kumagaku.ac.jp/english/"
+                                            >KGU</a
+                                        >
+                                        2022-2023
+                                    </h2>
+                                    <figure class="image is-4by3">
+                                        <img src="./assets/images/japan.JPG" />
+                                    </figure>
+                                    <br />
+                                    <p
+                                        class="has-text-weight-bold has-text-white">
+                                        Coursework focused on:
+                                    </p>
+                                    <ul>
+                                        <li class="has-text-white">
+                                            Japanese Language
+                                        </li>
+                                        <li class="has-text-white">Culture</li>
+                                        <li class="has-text-white">
+                                            JLPT Study
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        _="on intersection(intersecting) having threshold 0.2
+                if intersecting transition my opacity to 1
+                else transition my opacity to 0">
+                        <section class="section px-5">
+                            <h1 class="title">
+                                <i class="fas fa-bullseye"></i> &nbsp;Goals
+                            </h1>
+                        </section>
+                        <div class="columns px-4">
+                            <div class="column">
+                                <div class="box has-background-primary">
+                                    <h1 class="title has-text-white">
+                                        Career Goals
+                                    </h1>
+                                    <ul>
+                                        <li class="has-text-white">
+                                            Land a role as a backend engineer
+                                        </li>
+                                        <li class="has-text-white">
+                                            Master bussiness Japanese
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="box has-background-primary">
+                                    <h1 class="title has-text-white">
+                                        Personal Goals
+                                    </h1>
+                                    <ul>
+                                        <li class="has-text-white">
+                                            Have professional debut fight in
+                                            Japan
+                                        </li>
+                                        <li class="has-text-white">
+                                            Learn a third language
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        _="on intersection(intersecting) having threshold 0.2
+                if intersecting transition my opacity to 1
+                else transition my opacity to 0">
+                        <section class="section px-5">
+                            <h1 class="title">
+                                <i class="fas fa-code"></i>&nbsp;Favorite Editor
+                            </h1>
+                            <div class="block is-flex has-text-centered">
+                                <figure class="image is-128x128">
+                                    <a href="https://neovim.io/">
+                                        <img
+                                            src="./assets/images/neovim_logo.png" />
+                                    </a>
+                                </figure>
+                                <h2 class="title ml-6 my-auto">Neo Vim</h2>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div id="works" class="container" style="display: none">
+                    <div
+                        _="on intersection(intersecting) having threshold 0.2
+                if intersecting transition my opacity to 1
+                else transition my opacity to 0">
+                        <div class="columns block px-4">
+                            <div class="column">
+                                <div class="card has-background-primary">
+                                    <div class="card-image">
+                                        <figure class="image p-6">
+                                            <img
+                                                src="./assets/images/kioku_header.png"
+                                                alt="kioku devices image" />
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-48x48">
+                                                    <img
+                                                        src="./assets/images/kioku_logo.png"
+                                                        alt="kioku logo" />
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <p
+                                                    class="title is-4 has-text-white">
+                                                    Kioku - Japanese Learning
+                                                    Web App
+                                                </p>
+                                                <p class="subtitle is-6">
+                                                    <a
+                                                        class="has-text-link-light"
+                                                        href="https://www.kiokulearn.com"
+                                                        >kiokulearn.com</a
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="subtitle has-text-white">
+                                                Full stack solo web project
+                                                which teaches users how to write
+                                                Japanese.
+                                            </p>
+                                            <p>
+                                                <a
+                                                    class="button is-link is-inverted"
+                                                    href="https://www.kiokulearn.com/about"
+                                                    >Learn More</a
+                                                >
+                                            </p>
+                                            <p
+                                                class="subtitle mb-2 has-text-white">
+                                                Technology Used
+                                            </p>
+                                            <div class="tags are-medium">
+                                                <span class="tag"
+                                                    ><i
+                                                        class="fa-brands fa-python"></i>
+                                                    &nbsp;Flask - Python</span
+                                                >
+                                                <span class="tag"
+                                                    ><i class="fas fa-code"></i>
+                                                    &nbsp;HTMX</span
+                                                >
+                                                <span class="tag"
+                                                    ><i
+                                                        class="fas fa-database"></i>
+                                                    &nbsp;PostgreSQL</span
+                                                >
+                                                <span class="tag"
+                                                    ><i
+                                                        class="fas fa-server"></i>
+                                                    &nbsp;Heroku</span
+                                                >
+                                                <span class="tag"
+                                                    ><i
+                                                        class="fa-brands fa-js"></i>
+                                                    &nbsp;JavaScript</span
+                                                >
+                                                <span class="tag"
+                                                    ><i
+                                                        class="fa-brands fa-css3-alt"></i>
+                                                    &nbsp;Bulma</span
+                                                >
+                                                <span class="tag"
+                                                    ><i
+                                                        class="fa-brands fa-sass"></i>
+                                                    &nbsp;Sass</span
+                                                >
+                                                <span class="tag"
+                                                    ><i
+                                                        class="fa-brands fa-stripe"></i>
+                                                    &nbsp;Stripe</span
+                                                >
+                                                <span class="tag"
+                                                    ><i
+                                                        class="fa-brands fa-at"></i>
+                                                    &nbsp;Mailgun</span
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="card has-background-primary">
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <p class="title has-text-white">
+                                                More Coming Soon
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills" class="container" style="display: none">
+                    <div
+                        _="on intersection(intersecting) having threshold 0.2
+                if intersecting transition my opacity to 1
+                else transition my opacity to 0">
+                        <section class="px-5 section">
+                            <h1 class="title">
+                                <i class="fas fa-handshake"></i> &nbsp;Soft
+                                Skills
+                            </h1>
+                        </section>
+                        <div class="columns px-4">
+                            <div class="column">
+                                <div class="box has-background-primary content">
+                                    <h2 class="has-text-white">
+                                        Learning Ability
+                                    </h2>
+                                    <p class="has-text-white">
+                                        Excel and enjoy instruction based and
+                                        independent learning, acquiring new
+                                        skills, technologies, and spoken/written
+                                        languages.
+                                    </p>
+                                    <h2 class="has-text-white">
+                                        Multicultural Perspective
+                                    </h2>
+                                    <p class="has-text-white">
+                                        Exceptional adaptability and global
+                                        awareness. Through Foreign Exchange
+                                        gained valuable insights into
+                                        cross-cultural communication and
+                                        difficulties of
+                                        translation/interpretation
+                                    </p>
+                                    <h2 class="has-text-white">
+                                        Web Development Knowledge
+                                    </h2>
+                                    <p class="has-text-white">
+                                        Internalized the foundational techniques
+                                        and vocabulary for modern web
+                                        development.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        _="on intersection(intersecting) having threshold 0.2
+                if intersecting transition my opacity to 1
+                else transition my opacity to 0">
+                        <section class="px-5 section">
+                            <h1 class="title">
+                                <i class="fas fa-microchip"></i>
+                                &nbsp;Technologies
+                            </h1>
+                        </section>
+                        <div class="columns px-4">
+                            <div class="column">
+                                <div class="box has-background-primary">
+                                    <h1 class="title has-text-white">
+                                        Programming Languages
+                                    </h1>
+                                    <ul>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i
+                                                    class="fa-brands fa-python"></i>
+                                                &nbsp;Python</span
+                                            >
+                                        </li>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i class="fa-brands fa-js"></i>
+                                                &nbsp;JavaScript</span
+                                            >
+                                        </li>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i class="fas fa-database"></i>
+                                                &nbsp;SQL</span
+                                            >
+                                        </li>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i class="fas fa-terminal"></i>
+                                                &nbsp;Bash</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box has-background-primary">
+                                    <h1 class="title has-text-white">
+                                        Web Frameworks
+                                    </h1>
+                                    <ul>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i
+                                                    class="fa-brands fa-python"></i>
+                                                &nbsp;Flask</span
+                                            >
+                                        </li>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i class="fa-brands fa-js"></i>
+                                                &nbsp;Next.js</span
+                                            >
+                                        </li>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i class="fas fa-code"></i>
+                                                &nbsp;HTMX</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="box has-background-primary">
+                                    <h1 class="title has-text-white">Tools</h1>
+                                    <ul>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i class="fas fa-database"></i>
+                                                &nbsp;PostgreSQL</span
+                                            >
+                                        </li>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i
+                                                    class="fa-brands fa-git-alt"></i>
+                                                &nbsp;Git</span
+                                            >
+                                        </li>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i
+                                                    class="fa-brands fa-docker"></i>
+                                                &nbsp;Docker</span
+                                            >
+                                        </li>
+                                        <li class="subtitle has-text-white">
+                                            <span
+                                                ><i
+                                                    class="fa-brands fa-linux"></i>
+                                                &nbsp;Linux</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="container is-fluid has-background-primary">
+            <a
+                class="has-text-link-light"
+                href="https://www.linkedin.com/in/gage-hilyard/">
+                <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+            <a class="has-text-link-light" href="https://github.com/Oxmoon/">
+                <span class="icon">
+                    <i class="fab fa-square-github"></i>
+                </span>
+            </a>
+            <a class="has-text-link-light" href="./contact.html"> Contact </a>
+        </div>
+
+        <script type="text/hyperscript">
+            js
+                function getTheme() {
+                    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+                }
+            end
+            def theme()
+                set isDark to getTheme()
+                if isDark
+                    add .dark to body
+                end
+            end
+
+            def tab(tabs, child, el)
+                set allTabs to the children of tabs
+                remove .is-active from allTabs
+                add .is-active to the closest <li/> to el
+                hide #about then hide #works then hide #skills then show child
+            end
+        </script>
+    </body>
+</html>
